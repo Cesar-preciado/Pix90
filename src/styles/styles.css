@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+
+.HeaderApp{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #fff;
+    
+}
+
+.HeaderApp #WraperHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 10px;
+    background: red;
+}
+
+#WraperHeader a{
+    text-decoration: none; 
+    color:#fff; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#WraperHeader .MenuHamburguesa{
+    width: 31px;
+    height: auto;
+    cursor: pointer;
+}
+
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 3px;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+.HeaderApp .Search-f{
+    padding: 8px 0;
+    text-align: center;
+}
+
+.Search-f input{
+    border: 1px solid #ddd;
+    padding: 8px;
+    outline: none;
+    width: 200px;
+}
+
+.Search-f button{
+    border: 0;
+    padding: 9px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.wrapper-main{
+    margin-top: 141px;
+}
+
+
+.wrapper-main .MenuMovil{
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    overflow: hidden;
+    transition:  0.3s ease-in 0.4s;
+}
+
+/*
+.MenuMovil #title{
+
+    color: #000;
+    padding: 10px 0 9px 9px;
+    border-bottom: 1px solid #ddd;
+}
+
+.MenuMovil #title a{
+
+}*/
+
+.Component{
+    display: none;
+}
+
+
+.Component #title,.MenuMovil #title{
+    color: #000;
+    padding: 10px 0 9px 9px;
+    border-bottom: 1px solid #ddd;
+}
+
+.Component #title a, .MenuMovil #title a{
+    color: #000;
+    font-size: 23px;
+    text-decoration: none;
+}
+
+
+.Component ul, .MenuMovil ul{
+    margin-top: 27px;
+}
+
+.Component ul li, .MenuMovil ul li{
+    display: block;
+    margin-bottom: 25px;  
+    padding: 5px 0 5px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+ul li div img{
+    width: 20px;
+    cursor: pointer;
+}
+
+li a{
+    text-decoration: none;
+    color: red;
+}
+
+
+.wrapper-main .ListFts{
+       
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.ListFts .itemsPhotos{
+    width: calc((100% - 20px) / 1);
+    margin-bottom: 64px;
+}
+
+.ListFts .Wrapper-img{
+    margin-bottom: -4px;
+    text-align: center;
+}
+
+.ListFts .Wrapper-img img{
+    max-width: 82%;
+    height: auto;
+}
+
+
+.ListFts .Wrapper-inform{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 8px 0;
+    border: 1px solid #ff00002b;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.ListFts .Wrapper-inform img{
+    
+}
+
+
+
+@media screen and (min-width: 768px){
+    
+    .ListFts .itemsPhotos{
+        width: calc((100% - 20px) / 2);
+    }
+}
+
+
+@media screen and (min-width: 1200px){
+    
+   
+    
+    .HeaderApp .Search-f{
+        margin-top: 20px;
+    }
+    
+    .Search-f input{
+        width: 500px;
+    }
+    
+    
+    #WraperHeader .MenuHamburguesa{ 
+        display: none;
+    }
+    .wrapper-main{
+        display: flex;
+        margin-top: 179px;
+    }
+
+    .wrapper-main .MenuMovil{
+        display: none;
+    }
+
+    .wrapper-main .Component{
+        width: 20%;
+        display: block;
+    }
+    
+    .Component #title{
+        display: none;   
+     }
+
+    .Component ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Component ul li{
+        margin: 10px 0px 10px 0px;
+        /*border-bottom: 2px solid red;*/
+        border: 0;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      
+    }
+
+  .Component ul li .logo img{
+        max-width: 30px;
+        height: auto;
+        cursor: pointer;
+    }
+
+
+
+    .ListFts .itemsPhotos{
+        width: calc((100% - 30px) / 4);
+        text-align: center;
+        font-size: 13px;
+        margin: 0 auto;
+        margin-bottom: 80px;
+        cursor: pointer;
+    }
+    
+    .ListFts .Wrapper-img img{
+        height: 182px;
+        width: 89%;
+}
+
+
+    
+}
+
+
+
+
+
+
+
+
+

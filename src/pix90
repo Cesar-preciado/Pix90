@@ -1,0 +1,122 @@
+
+//<Route exact path="/Categoria/:category"
+//'https://pixabay.com/api/?key=22334813-b26d7829743f79bc384b38e06&q='+query)
+
+
+const App = () =>{
+	
+const [ ListInicial, setInicial] = useState([])
+
+	
+	useeFfect(()=>{
+
+		const QueryFotos = async ()=>{
+
+		const resp = await fetch("url")
+		const data = resp.json()
+
+		setInicial(data)
+		}
+		
+		QueryFotos()
+
+	},[])
+
+
+	render(
+
+		<div className="App">
+			<Route path="/" 
+		       <Home Photos={ListInicial} />
+			/>
+
+		<Route exact path="/Categoria/:category" render={ (props) =><Category {...props} Photos={ListInicial} } />
+
+		</div> 
+	)
+
+}
+
+const Home = ({Photos}) =>{
+	
+	const [Fotos, setFotos] = useState(Photos)
+    
+    useeEffect(()=>{
+    	setFotos(Photos)
+    },[Photos])
+
+
+	useEffect(() => { 
+
+			const fetchData = async () =>{
+
+				const resp = await fetch("url")
+				const data = await resp.json()
+
+				setFotos(data)
+			}
+
+			fetchData()
+	 },[])
+
+
+	 useEffect(()=>{
+	 		UpdateList(Fotos)
+	 },[Fotos])
+
+
+	render(
+		<div className="Home">
+			<SearchFotos 
+			<Lista Photos={Fotos} />
+		</div>
+	)
+
+}
+
+const Category = ({Photos}) =>{
+	
+
+const [Cat, setCat] = useState(Photos)
+
+
+	render(
+		<div className="Category">
+			<Lista Photos={Cat} />	
+		</div>
+	)
+}
+
+
+
+const SearchFotos = async () =>{
+	
+	const query = document.querySelector("#query").value
+
+	const resp = await fetch("query="+query)
+	const data = resp.json()
+
+		setInicial(data)
+}
+
+
+
+const Lista = ({Photos}) =>{
+
+	const [Photos, setPhotos] = useState(Photos)
+
+	render(
+
+		<div className="ListPhotos">
+				{
+					Photos.map((List))
+				}
+		</div>
+	)
+		
+}
+
+
+
+
+
