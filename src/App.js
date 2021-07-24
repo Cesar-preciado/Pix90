@@ -50,9 +50,9 @@ const OpenSideBar = (e)=>{
 return (
         <div className="App" >
             <BrowserRouter>
-              <Route exact path="/" render={ (props) =><Home {...props} Fts={Lista} QueryFotos={QueryFotos} UpdateList={UpdateList} OpenSideBar={OpenSideBar} />   } />
-              <Route exact path="/Categoria/:categoria" render={ (props)=><Category {...props} Fts={Lista} QueryFotos={QueryFotos} UpdateList={UpdateList} OpenSideBar={OpenSideBar}  /> } />  
-              <Route exact path="/Imagen/:id" render={ (props) =><Imagen {...props} QueryFotos={QueryFotos} Fts={Lista} OpenSideBar={OpenSideBar} /> } />
+              <Route exact path="/Pix90/" render={ (props) =><Home {...props} Fts={Lista} QueryFotos={QueryFotos} UpdateList={UpdateList} OpenSideBar={OpenSideBar} />   } />
+              <Route exact path="/Pix90/Categoria/:categoria" render={ (props)=><Category {...props} Fts={Lista} QueryFotos={QueryFotos} UpdateList={UpdateList} OpenSideBar={OpenSideBar}  /> } />  
+              <Route exact path="/Pix90/Imagen/:id" render={ (props) =><Imagen {...props} QueryFotos={QueryFotos} Fts={Lista} OpenSideBar={OpenSideBar} /> } />
             </BrowserRouter>
         </div>
     )

@@ -15,38 +15,38 @@ const ListCategoria = ({visibilidad}) =>{
     return (
         <div className="Component">
            <div id="title">
-                <Link to="/" title="Photos">Pix90</Link>
+                <Link to="/Pix90/" title="Photos">Pix90</Link>
             </div>
             <ul>
                 <li>
                     <div className="logo">
                        <img src={Home} alt="" />
                     </div>
-                    <Link to="/" title="Home">Home</Link>
+                    <Link to="/Pix90/" title="Home">Home</Link>
                 </li>
                 <li>
                     <div className="logo">
                        <img src={computer} alt="" />
                     </div>
-                    <Link to="/Categoria/computer" title="computer">Computer</Link>
+                    <Link to="/Pix90/Categoria/computer" title="computer">Computer</Link>
                 </li>
                 <li>
                   <div className="logo">
                     <img src={education} alt="" />
                   </div>
-                    <Link to="/Categoria/education" title="education">Educatión</Link>
+                    <Link to="/Pix90/Categoria/education" title="education">Educatión</Link>
                 </li>
                 <li>
                   <div className="logo">
                     <img src={sciencia} alt="" />
                   </div>
-                    <Link to="/Categoria/science" title="science">Ciencia</Link>
+                    <Link to="/Pix90/Categoria/science" title="science">Ciencia</Link>
                 </li>
                 <li>
                 <div className="logo">
                     <img src={people} alt="" />
                   </div>
-                    <Link to="/Categoria/people" title="people" >Peoples</Link>
+                    <Link to="/Pix90/Categoria/people" title="people" >Peoples</Link>
                   </li>
             </ul>
         </div>

@@ -35,7 +35,7 @@ const IdImg = props.match.params.id
     return(
         <div className="Photo">
           <HeaderApp 
-          QueryFotos={QueryFotos}
+          QueryFotos={props.QueryFotos}
           />
             <div className="wrapper-main">
                 <ListCategoria />

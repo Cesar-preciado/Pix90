@@ -16,7 +16,7 @@ const Msm = "Imagen no disponible"
 				Fts.map( (listfts) =>(
 					<div key={listfts.id} className="itemsPhotos">
                   		<div className="Wrapper-img">
-							<Link to={`/Imagen/${listfts.id}`}>
+							<Link to={`/Pix90/Imagen/${listfts.id}`}>
 								<img src={listfts.webformatURL} alt="" title={listfts.tags}></img>
 							</Link>
                   		</div>
